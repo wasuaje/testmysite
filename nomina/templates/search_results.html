@@ -1,0 +1,12 @@
+<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if bancos %}
+    <p>Found {{ bancos|length }} bancos{{ bancos|pluralize }}.</p>
+    <ul>
+        {% for banco in bancos %}
+        <li>{{ banco.nombre }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No books matched your search criteria.</p>
+{% endif %}
